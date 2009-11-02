@@ -1,0 +1,35 @@
+This patch allowed one to run Cakephp unit tests from inside PHPUnderControl. 
+
+The patch is meant for Cakephp 1.2 and above... it will allow you to run SimpleTest inside PHPUnderControl. 
+
+SimpleTest is the name of a PHP unit testing framework written by Marcus Baker 
+and hosted at simpletest.sourceforge.net (and also at simpletest.org). 
+
+PHPUnderControl can display report from PHPCodeSniffer which is a coding convention monitor. 
+So how do we use the patch for Cakephp Here are the steps :
+
+[I am assuming that we are doing everything inside the Unix home directory "testenv" whose absolute path is "/home/testenv". 
+You are; of course, free to use a different path.]
+
+0. Download and uncompress CruiseControl. I am assuming CruiseControl now resides at "/home/testenv/cc".
+1. Install PHPUnderControl.
+
+2. Copy the patch into the "/home/testenv/cc/webapps/cruisecontrol/" directory.
+
+3. Create these three directories:
+"/home/testenv/cc/projects/PROJECT_NAME/build", 
+"/home/testenv/cc/projects/PROJECT_NAME/build/logs" and 
+""/home/testenv/cc/projects/PROJECT_NAME/build/src-doc". 
+Don't forget to replace "PROJECT_NAME" with the actual name of the project.
+
+4. Checkout a copy of your Cakephp project into "/home/testenv/cc/projects/PROJECT_NAME/source" 
+and then install the Cakephp instance. A good alternative is to create a symbolic link to an existing Cakephp installation.
+
+5. Once Cakephp is installed (or symlinked), make sure that the SimpleTest module is enabled.
+
+6. Now include the Cakephp project in CruiseControl's main configuration file (i.e. config.xml). 
+
+7. The last step is to create the build file (build.xml, the famous Ant build file) for the project. 
+This build file will decide what will happen everytime any new code is committed into the version control system. 
+
+Next browse to "http://localhost:8080/cruisecontrol/index". The Cakephp project should be listed.
