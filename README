@@ -1,6 +1,6 @@
 This patch allowed one to run Cakephp unit tests from inside PHPUnderControl. 
 
-The patch is meant for Cakephp 1.2 and above... it will allow you to run SimpleTest inside PHPUnderControl. 
+This patch is meant for Cakephp 1.2 and above... it will allow you to run SimpleTest inside PHPUnderControl. 
 
 SimpleTest is the name of a PHP unit testing framework written by Marcus Baker 
 and hosted at simpletest.sourceforge.net (and also at simpletest.org). 
@@ -33,3 +33,6 @@ and then install the Cakephp instance. A good alternative is to create a symboli
 This build file will decide what will happen everytime any new code is committed into the version control system. 
 
 Next browse to "http://localhost:8080/cruisecontrol/index". The Cakephp project should be listed.
+
+This patch is based on Drupal’s current patch, more info here:
+http://demo.codesetter.com/phpundercontrol-drupal-6-n-7
