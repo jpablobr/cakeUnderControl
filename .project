@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>cakeUnderControl</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.aptana.ide.editor.php.aptanaPhpBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.aptana.ide.editor.php.phpnature</nature>
+		<nature>com.aptana.ide.framework.jaxernature</nature>
+		<nature>com.aptana.ide.project.nature.web</nature>
+	</natures>
+</projectDescription>
